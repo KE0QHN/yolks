@@ -14,7 +14,7 @@ RUN         apt update -y \
             && chmod +x dotnet-install.sh \
 			&& ./dotnet-install.sh -i /usr/share -v $D_V \
    			&& ./dotnet-install.sh -i /usr/share -v $D_V2 \
-	  		&& ./dotnet-install.sh -i /usr/share -v $D_V3 \
+	  		&& ./dotnet-install.sh -i /usr/share --channel 8.0 \
             && ln -s /usr/share/dotnet /usr/bin/dotnet
 
 USER        container
